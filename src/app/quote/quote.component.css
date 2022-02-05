@@ -3,7 +3,33 @@
 .container{
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    color: white;
-
+    
+   top: 20%;
+}
+.lines::after{
+    left: 0;
+}
+.lines::before{
+    right: 0;
+}
+.lines::after, .lines::before{
+    content: '';
+    position: absolute;
+    margin: auto;
+    background-color:black;
+    height: 2px;
+    width: 45%;
+    top: 7.5%;
+}
+    
+.diamond{
+    height: 40px;
+    width: 40px;
+    border: 4px solid black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(45deg);
 }
