@@ -9,7 +9,7 @@ import { Quotes } from '../quotes';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] =[
-
+        
   ]
 
   constructor() { 
