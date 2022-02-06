@@ -7,6 +7,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuotedetailComponent } from './quotedetail/quotedetail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteFooterComponent } from './quote-footer/quote-footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { QuoteFooterComponent } from './quote-footer/quote-footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+     FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

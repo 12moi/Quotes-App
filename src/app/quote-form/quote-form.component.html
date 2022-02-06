@@ -2,11 +2,11 @@
 
 <div class="container">
  <h2 class="text-center"> Add your Quote</h2>
-    <form #goalForm="">
+    <form #goalForm="ngForm">
         <div class="form-group">
     
             <label for="name"> Your Name</label>
-            <input type="text" required class="form-control" id="name"  name="name">
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name"  name="name">
     
     
             <!-- Display {{newQuote.name}} -->
@@ -14,21 +14,21 @@
         <div class="form-group">
     
             <label for="name">Quote Title</label>
-            <input type="text" required class="form-control" id="quote-title"  name="name">
+            <input type="text" required class="form-control" id="quote-title" [(ngModel)]="newQuote.name" name="name">
     
     
-            <!-- Display {{newQuotes.name}} -->
+            <!-- Display {{newQuote.name}} -->
         </div>
         <div class="form-group">
     
             <label for="description">Quote </label>
-            <textarea class="form-control" id="quote" rows="5" required></textarea>
+            <textarea class="form-control" id="quote" [(ngModel)]="newQuote.quote" rows="5" required></textarea>
     
         </div>
         <div class="form-group">
     
             <label for="name">Quote author</label>
-            <input type="text" required class="form-control" id="name"  name="name">
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.author" name="name">
     
     
             <!-- Display {{newQuote.author}} -->
@@ -37,9 +37,12 @@
     
             <label for="postedOn">Posted on</label>
 
-            <input type='date' id="postedOn" required>
+            <input type='date' id="postedOn"  required>
     
         </div> <br>
         <button type="submit" class="btn btn-success">Add Quote</button>
+       
     </form>
+    <button type="submit"class="btn btn-success"  > <i class="fa fa-thumbs-up" id="like"></i></button><br>
+    <button type="submit"class="btn btn-success"  > <i class="fa fa-thumbs-down" id="like"></i></button>
 </div>
