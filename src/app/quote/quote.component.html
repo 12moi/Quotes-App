@@ -5,37 +5,28 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <app-quote-form (click)="addQuote() "></app-quote-form>
+            <app-quote-form ></app-quote-form>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9" style="margin-top: 1%;">
             <div class="all-cards">
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title">
-                            <!-- {{quote.name}} -->
+                        <div class="card-title"> 
+                            <!-- {{quotes.name}}  -->
                         </div>
                         <p class="card-text">
-                            <!-- {{Quotes.title}} -->
-                        </p>
-                        <app-quotedetail (isRead)='deleteQuote()'></app-quotedetail>
-                        <span class="card-subtitle mb-2">Posted by: <span id="name">
-                            <!-- {{Quote.name}} -->
-                        </span><span id="date">on: <span id="datecolor">
+                            <!-- {{quotes.title}} -->
+                         </p>
+                        <app-quotedetail ></app-quotedetail>
+                        <span class="card-subtitle mb-2">Posted by: <span id="name"> 
+                             <!-- {{Quote.name}}  -->
+                         </span><span id="date">on: <span id="datecolor">
                            
-                        </span></span></span>
+                        </span></span></span> 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="box">
-       
-    </div>
-    
-    <div class="box">
-        <app-quotedetail></app-quotedetail>
     </div>
 </div>
 <app-quote-footer></app-quote-footer>
