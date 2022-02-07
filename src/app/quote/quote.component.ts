@@ -22,8 +22,8 @@ export class QuoteComponent implements OnInit {
     new Quote (5,'Paul','Code and people','Programs must be written for people to read, and only incidentally for machines to execute.','Harold Abelson',1,0 ,new Date(2022,2,9)),
     new Quote (6,'Kipchumba','Tech and life','For a list of all the ways technology has failed to improve the quality of life, please press three.','Alice Kahn',1,0 ,new Date(2022,2,10))
   ];
-  maxLikes: any
-  sortQuotes: any
+  
+ 
   addQuote(quote: Quote){
     let arraysize = this.Quotes.length;
     quote.id = arraysize+1;
