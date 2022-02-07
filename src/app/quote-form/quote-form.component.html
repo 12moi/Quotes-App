@@ -6,31 +6,31 @@
         <div class="form-group">
     
             <label for="name"> Your Name</label>
-            <input type="text" required class="form-control" id="name"   name="name">
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name"  name="name">
 
         </div>
         <div class="form-group">
     
             <label for="name">Quote Title</label>
-            <input type="text" required class="form-control" id="quote-title"  name="name">
+            <input type="text" required class="form-control" id="quote-title" [(ngModel)]="newQuote.name" name="name" name="name">
      
         </div>
         <div class="form-group">
     
             <label for="description">Quote </label>
-            <textarea class="form-control" id="quote"  rows="5" required></textarea>
+            <textarea class="form-control" id="quote" [(ngModel)]="newQuote.quote" rows="5" required></textarea>
     
         </div>
         <div class="form-group">
     
             <label for="name">Quote author</label>
-            <input type="text" required class="form-control" id="name"  name="name">
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.author" name="name">
         </div><br>
         <div class="form-group">
     
             <label for="postedOn">Posted on</label>
 
-            <input type='date' id="postedOn"  required>
+            <input type='date' id="postedOn" [(ngModel)]="newQuote.datePosted" required>
     
         </div> <br>
         <button type="submit" class="btn btn-success">Add Quote</button>

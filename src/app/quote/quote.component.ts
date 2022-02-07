@@ -38,8 +38,8 @@ export class QuoteComponent implements OnInit {
       
     }
   }
- 
-  displayInfo(index: number){
+   i: any
+  showInfo(index: number){
     this.Quotes[index].showInfo = !this.Quotes[index].showInfo;
   }
   constructor() { 

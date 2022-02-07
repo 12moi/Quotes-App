@@ -15,5 +15,7 @@ body{
     box-sizing: border-box;
     font-size: 100%;
     transition: all 0.2s ease;
+    background-color: grey;
    
+    
 }

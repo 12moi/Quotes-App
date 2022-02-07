@@ -8,11 +8,11 @@
             <app-quote-form ></app-quote-form>
             <!-- ()="addQuote()" -->
         </div>
-        <div class="col-sm-9" style="margin-top: 1%;">
-            <div class="all-cards">
-                <div class="card" *ngFor="let quote of Quotes"  style="width: 24rem; display: flex;" >
+        <div class="col-sm-9" style="margin-top: 1%;width: 24rem;">
+            <div class="all-cards" >
+                <div class="card" *ngFor="let quote of Quotes"   >
                     <div class="card-body">
-                        <h4 class="card-title"><button  class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
+                        <h4 class="card-title"><button (click)='showInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
                         <div class="card-title"> 
                             {{quote.title}} 
                         </div>
