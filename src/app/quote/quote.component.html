@@ -8,7 +8,7 @@
             <app-quote-form ></app-quote-form>
             <!-- ()="addQuote()" -->
         </div>
-        <div class="col-sm-9" style="margin-top: 1%;width: 24rem;">
+        <div class="col-sm-9" style="margin-top: 1%;width: 24rem; ">
             <div class="all-cards" >
                 <div class="card" *ngFor="let quote of Quotes"   >
                     <div class="card-body">
@@ -23,7 +23,7 @@
                         <span class="card-subtitle mb-2">Posted by: <span id="name"> 
                              {{quote.name}} 
                          </span><span id="date">on: <span id="datecolor">
-                            {{quote.datePosted|date:'short'}}
+                            {{quote.datePosted|date}}
                         </span></span></span> 
                     </div>
                 </div>
@@ -31,4 +31,4 @@
         </div>
     </div>
 </div>
-<!-- <app-quote-footer></app-quote-footer> -->
+<app-quote-footer></app-quote-footer>
