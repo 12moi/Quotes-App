@@ -6,22 +6,24 @@
     <div class="row">
         <div class="col-sm-3">
             <app-quote-form ></app-quote-form>
+            <!-- ()="addQuote()" -->
         </div>
         <div class="col-sm-9" style="margin-top: 1%;">
             <div class="all-cards">
-                <div class="card">
+                <div class="card" *ngFor="let quote of Quotes"  style="width: 24rem; display: flex;" >
                     <div class="card-body">
+                        <h4 class="card-title"><button  class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
                         <div class="card-title"> 
-                            <!-- {{quotes.name}}  -->
+                            {{quote.title}} 
                         </div>
                         <p class="card-text">
-                            <!-- {{quotes.title}} -->
+                            {{quote.quote}}
                          </p>
-                        <app-quotedetail ></app-quotedetail>
+                        <app-quotedetail *ngIf='quote.showInfo'  ></app-quotedetail>
                         <span class="card-subtitle mb-2">Posted by: <span id="name"> 
-                             <!-- {{Quote.name}}  -->
+                             {{quote.name}} 
                          </span><span id="date">on: <span id="datecolor">
-                           
+                            {{quote.datePosted|date:'short'}}
                         </span></span></span> 
                     </div>
                 </div>
@@ -29,4 +31,4 @@
         </div>
     </div>
 </div>
-<app-quote-footer></app-quote-footer>
+<!-- <app-quote-footer></app-quote-footer> -->

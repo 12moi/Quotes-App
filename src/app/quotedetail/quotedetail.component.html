@@ -1,10 +1,13 @@
 
-<div class="container-box" style="display: flex; ">
-    <div class="box" style="margin: 1%;">
-        <button type="submit"class="btn btn-success"> <i class="fa fa-thumbs-up" id="like"></i></button><br>
+<h4 class="card-subtitle mb-2 text-muted"> 
+    <!-- - {{Quotes.author}} <span id="when">Posted: -->
 
-    </div>
-    <div class="box" style="margin: 1%">
-        <button type="submit"class="btn btn-success"> <i class="fa fa-thumbs-down" id="like"></i></button>
-    </div>
+         days ago.
+</h4>
+<div class="container-fluid">
+
+    <button type="submit"class="btn btn-success" style="margin: 1%;"> <i class="fa fa-thumbs-up" id="like"></i></button><button type="submit"class="btn btn-success" style="margin: 1%;"> <i class="fa fa-thumbs-down" id="like"></i></button><button class="btn btn-sm btn-danger" style="margin: 3%;" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
+    
+    
 </div>
+
