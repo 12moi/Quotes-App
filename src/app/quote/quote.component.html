@@ -12,7 +12,7 @@
             <div class="all-cards" >
                 <div class="card" *ngFor="let quote of Quotes"   >
                     <div class="card-body">
-                        <h4 class="card-title"><button (click)='showInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
+                        <h4 class="card-title" appHighlightQoute><button (click)='showInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
                         <div class="card-title"> 
                             {{quote.title}} 
                         </div>
