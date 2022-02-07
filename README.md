@@ -52,7 +52,7 @@ CSS<br>
 Markdown
 
 ### Known Bugs
-
+Some buttons are under development and local storage for the quotes also under development
 ### Contact information
 If you have any question or contributions, please email me at [moi.shadrack@student.moringaschoolgmail.com]
 
