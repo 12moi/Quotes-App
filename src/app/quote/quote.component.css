@@ -33,3 +33,6 @@
     margin: auto;
     transform: rotate(45deg);
 }
+.card{
+    width: 1000px;
+}

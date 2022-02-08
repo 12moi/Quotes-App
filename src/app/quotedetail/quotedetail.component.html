@@ -1,12 +1,23 @@
 
 <h4 class="card-subtitle mb-2 text-muted"> 
-    <!-- - {{Quotes.author}} <span id="when">Posted: -->
+    <p>This quote has taken {{Quote.datePosted|date}} days since it was created</p>
+    <p>It was created by {{ Quote.name }}</p>
 
-         days ago.
+      
 </h4>
-<div class="container-fluid">
-
-    <button type="submit"class="btn btn-success" (click)='upvote()'>{{Quote.likes}} style="margin: 1%;"> <i class="fa fa-thumbs-up" id="like"></i></button><button type="submit"class="btn btn-success" (click)='downvote()'>{{Quote.dislikes}}style="margin: 1%;"> <i class="fa fa-thumbs-down" id="like"></i></button><button class="btn btn-sm btn-danger" style="margin: 3%;" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
+<div class="row">
+     <div class="col-sm-4">
+        <button type="submit"class="btn btn-success" (click)='upvote()'>{{Quote.likes}} <i class="fa    fa-thumbs-up" id="like"></i>
+        </button>
+     </div>
+     <div class="col-sm-4">
+        <button type="submit"class="btn btn-success" (click)='downvote()'>{{Quote.dislikes}} <i class="fa fa-thumbs-down" id="like"></i>
+        </button>
+     </div>
+     <div class="col-sm-4">
+        <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete">
+        </i></button> 
+     </div>
     
     
 </div>

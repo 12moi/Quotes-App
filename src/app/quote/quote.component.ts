@@ -24,15 +24,17 @@ export class QuoteComponent implements OnInit {
   ];
   
  
-  addQuote(quote: Quote){
+  addQuote(quote: any){
     let arraysize = this.Quotes.length;
     quote.id = arraysize+1;
     quote.datePosted = new Date(quote.datePosted)
     this.Quotes.push(quote)
   }
+ 
+
   quoteDelete(isRead: any, index: any){
     if (isRead) {
-      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+      let toDelete = confirm(`Are you sure you want to delete this ${this.Quotes[index].quotetitle} Quote?`)
       if(toDelete){
         this.Quotes.splice(index,1);
       }
@@ -40,9 +42,10 @@ export class QuoteComponent implements OnInit {
     }
   }
    i: any
-  showInfo(index: number){
-    this.Quotes[index].showInfo = !this.Quotes[index].showInfo;
+  showInfo(index:any){
+    this.Quotes[index].showDescription = !this.Quotes[index].showDescription;
   }
+ 
   constructor() { 
     
   }

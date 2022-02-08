@@ -5,21 +5,23 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <app-quote-form ></app-quote-form>
+            <app-quote-form (addQuote)='addQuote($event)'></app-quote-form>
             
         </div>
-        <div class="col-sm-9" style="margin-top: 1%;width: 24rem; ">
-            <div class="all-cards" >
-                <div class="card" *ngFor="let quote of Quotes"   >
-                    <div class="card-body">
+        <div class="col-sm-9" style="margin-top: 1%; ">
+            <div class="all-cards" style="display: flex; justify-content: space-around; ">
+                <div class="card" *ngFor="let quote of Quotes; let i=index" style="margin-left: 3%;" >
+                    <div class="card-body" >
                         <h4 class="card-title" appHighlightQoute><button (click)='showInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
                         <div class="card-title"> 
-                            {{quote.title}} 
+                            {{ quote.quotetitle}} 
                         </div>
                         <p class="card-text">
                             {{quote.quote}}
                          </p>
-                        <app-quotedetail *ngIf='quote.showInfo'  ></app-quotedetail>
+                       <div *ngIf='quote.showDescription'>
+                        <app-quotedetail [Quote]='quote' (isComplete) = 'quoteDelete($event,i)'></app-quotedetail>
+                       </div>
                         <span class="card-subtitle mb-2">Posted by: <span id="name"> 
                              {{quote.name}} 
                          </span><span id="date">on: <span id="datecolor">
