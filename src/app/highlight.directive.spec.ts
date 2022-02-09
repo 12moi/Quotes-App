@@ -1,8 +1,22 @@
-import { HighlightDirective } from './ highlight-quote';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
-describe('HighlightDirective', () => {
-  it('should create an instance', () => {
-    const directive = new HighlightDirective();
-    expect(directive).toBeTruthy();
-  });
-});
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+
+  constructor(private elem:ElementRef) {
+
+  }
+  @HostListener("click") onClicks(){
+    this.textDeco("green")
+  }
+
+  @HostListener("dblclick") onDoubleClicks(){
+    this.textDeco("None")
+  }
+  private textDeco(action:string){
+    this.elem.nativeElement.style.color=action;
+  }
+
+}

@@ -6,7 +6,6 @@
     <div class="row">
         <div class="col-sm-3">
             <app-quote-form (addQuote)='addQuote($event)'></app-quote-form>
-            
         </div>
         <div class="col-sm-9" style="margin-top: 1%; ">
             <div class="all-cards" style="display: flex; justify-content: space-around; ">
@@ -24,8 +23,9 @@
                        </div>
                         <span class="card-subtitle mb-2">Posted by: <span id="name"> 
                              {{quote.name}} 
-                         </span><span id="date">on: <span id="datecolor">
-                            {{quote.datePosted|date}}
+                         </span><span id="date">on:{{quote.datePosted|date}} <span id="datecolor">
+                            
+                            <!-- {{ quote.quoteDate|date|uppercase }} -->
                         </span></span></span> 
                     </div>
                 </div>

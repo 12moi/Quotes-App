@@ -10,10 +10,11 @@ import { Quote } from '../Quote';
 export class QuotedetailComponent implements OnInit {
   @Input()
   Quote!: Quote;
-  @Output() isRead = new EventEmitter<boolean>();
-  deleteQuote(read:boolean){
-    this.isRead.emit(read);
+  @Output() isComplete = new EventEmitter<boolean>();
+  deleteQuote(complete:boolean){
+    this.isComplete.emit(complete);
   }
+  
   upvote(){
     this.Quote.likes+=1;
   }
@@ -26,3 +27,7 @@ export class QuotedetailComponent implements OnInit {
   }
 
 }
+function complete(complete: any) {
+  throw new Error('Function not implemented.');
+}
+
