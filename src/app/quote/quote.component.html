@@ -12,7 +12,7 @@
                 <div class="card" *ngFor="let quote of Quotes; let i=index" style="margin-left: 3%;" >
                     <div class="card-body" >
                         <h4 class="card-title" appHighlightQoute><button (click)='showInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
-                        <div class="card-title"> 
+                        <div class="card-title" style="color: blue; font-style: bold;"> 
                             {{ quote.quotetitle}} 
                         </div>
                         <p class="card-text">
@@ -21,12 +21,13 @@
                        <div *ngIf='quote.showDescription'>
                         <app-quotedetail [Quote]='quote' (isComplete) = 'quoteDelete($event,i)'></app-quotedetail>
                        </div>
-                        <span class="card-subtitle mb-2">Posted by: <span id="name"> 
-                             {{quote.name}} 
-                         </span><span id="date">on:{{quote.datePosted|date}} <span id="datecolor">
-                            
-                            <!-- {{ quote.quoteDate|date|uppercase }} -->
-                        </span></span></span> 
+                        <span class="card-subtitle mb-2">Posted by:
+                             <span id="name" style="color: green;"> 
+                              {{quote.name}} 
+                         
+                              </span>
+                              on:{{quote.datePosted|date}}
+                        </span>
                     </div>
                 </div>
             </div>

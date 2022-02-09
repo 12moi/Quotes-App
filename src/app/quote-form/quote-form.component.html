@@ -31,8 +31,8 @@
     
             <label for="name">Quote author</label>
             <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' minlength="3" required>
-            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-                <p>Quote is required</p>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Quote Author is required</p>
             </div>
         </div><br>
         <div class="form-group">
